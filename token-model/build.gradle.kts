@@ -2,6 +2,7 @@ plugins {
     kotlin("jvm") version "1.9.0"
     kotlin("kapt")
     kotlin("plugin.serialization") version "1.9.0"
+    alias(libs.plugins.dokka)
     `maven-publish`
 }
 

@@ -28,11 +28,11 @@ import com.eggman.mortar.android.Mortar
 import com.eggman.mortar.android.MortarComposeButtonStyle
 
 /**
- * Primary action button. This button is meant for cases where the CTA being performed by the user
- * is the primary action when considering all the actions they can take in a given section of the
- * interface.
+ * A mortar design system button. This button is designed to be used inside a [Mortar] theme. It
+ * is recommended to use the default style built in or use a [Mortar.components] definition of a
+ * [MortarComposeButtonStyle].
  *
- * This wraps [Button], see the docs for this class for more information.
+ * This wraps material 3 [Button], see the docs for this class for more information.
  *
  * Note: if we were generating a full theme, things like shape, content padding, style would be
  * configurable on this api

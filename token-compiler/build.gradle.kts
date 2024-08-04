@@ -2,6 +2,7 @@
 plugins {
     kotlin("jvm")
     kotlin("kapt")
+    alias(libs.plugins.dokka)
 }
 
 java {

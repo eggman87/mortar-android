@@ -63,6 +63,14 @@ internal object StringCheeseTokenSchema
 
 drop json file called `sc_tokens.json` into `token-compiler/resources`.
 
+## Javadocs
+To see dokka javadocs in your browser, run:
+```
+./gradlew dokkaJavadoc
+```
+Then you can navigate to each modules index.html @ module/build/dokka/javadoc/index.html to view 
+javadocs in your browser. 
+
 ## Breaking Changes
 To support semantic versioning, this project uses the [binary-compatibility-validator](https://github.com/Kotlin/binary-compatibility-validator) 
 plugin. Run the following command to dump the current api as the baseline version to compare against:
