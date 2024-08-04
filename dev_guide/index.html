@@ -115,6 +115,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#components" class="nav-link">Components</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#using-theme-properties" class="nav-link">Using theme properties</a>
               <ul class="nav flex-column">
               </ul>
@@ -153,7 +157,7 @@
 </code></pre>
 <p>The themes project will bring in all product themes from MDS, but don't worry - R8 will get rid of unused
 classes when compiling a release build.</p>
-<p>Next, to use Mortar you can wrap all of your composable code with <code>MaterialMortarTheme</code>. Mortar currently
+<p>Next, to use Mortar components, it is required wrap all of your composable code with <code>MaterialMortarTheme</code>. Mortar currently
 uses material 3 components internally. </p>
 <pre><code class="language-kotlin">    MaterialMortarTheme(
         theme = HebMortar.theme,
@@ -165,6 +169,17 @@ uses material 3 components internally. </p>
 <p>Current themes available: </p>
 <pre><code class="language-kotlin">HebMortar.theme // heb 
 CmMortar.theme // central market
+</code></pre>
+<h2 id="components">Components</h2>
+<p>*<em>view javadocs for more information on available parameters</em></p>
+<p>MDS currently supports the following components:</p>
+<ul>
+<li><code>MortarButton</code>: A Mortar theme implementation of a button, this button uses mortar theming on top of material UI button theming.</li>
+</ul>
+<pre><code class="language-kotlin">            MortarButton(
+                onClick = {},
+                label = &quot;I am a button&quot;
+            )
 </code></pre>
 <h2 id="using-theme-properties">Using theme properties</h2>
 <p>It is recommended that you use components if they already exist, but you still might sometimes need 
