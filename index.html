@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A Mortar design system implementation for Android.">
+        <meta name="author" content="Eggman87 Apps.">
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Mortar Design System</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fontawesome.min.css" rel="stylesheet">
+        <link href="css/brands.min.css" rel="stylesheet">
+        <link href="css/solid.min.css" rel="stylesheet">
+        <link href="css/v4-font-face.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Mortar Design System</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="." class="nav-link active" aria-current="page">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="dev_guide/" class="nav-link">Dev Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="testing/" class="nav-link">Testing</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="dev_guide/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="true">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#welcome-to-mortar-android" class="nav-link">Welcome to Mortar Android</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#architecture" class="nav-link">Architecture</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#project-caveats" class="nav-link">Project caveats</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#project-modules" class="nav-link">Project Modules</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#versioning" class="nav-link">Versioning</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-mortar-android">Welcome to Mortar Android</h1>
+<p>Mortar is application design system, meant to make building UI consistent, flexible and
+most importantly fast. The goal of Mortar is to allow developers to focus on building new 
+features - and less on implementation details of common ui elements. This project is the Android 
+implementation of Mortar for Jetpack Compose.</p>
+<p>The implementation of Mortar will lean heavily on Android platform standards, and will use material 3 
+(m3) components where possible. The structure of this design system is based 
+on <a href="https://atomicdesign.bradfrost.com/">Atomic Design</a></p>
+<h2 id="architecture">Architecture</h2>
+<p>The Mortar design system architecture is based on having a single source of truth. That single source 
+of truth is the mortar design data JSON files. These JSON files are used to code-generate themes per 
+product/brand. The JSON data would be a cross-platform owned definition of product theme implementations 
+of MDS. </p>
+<h5 id="single-source-of-truth"><strong>Single Source of Truth</strong></h5>
+<p>The design data JSON files define the themes and their properties. These files include definitions for 
+colors, typography, and component styles, which are used across different parts of the application to 
+ensure consistency and flexibility.</p>
+<h5 id="code-generation-process"><strong>Code Generation Process</strong></h5>
+<p>The code generation process takes the JSON files and generates platform-agnostic theme implementations. 
+This is handled by the token-compiler module, which is a Kotlin annotation processor. It reads the JSON 
+definitions and generates Kotlin code representing the theme components. The generated files are placed 
+in the themes module.</p>
+<h5 id="mortar-theme-implementation"><strong>Mortar Theme Implementation</strong></h5>
+<p>The MortarTheme class serves as a container for the generated theme values. It includes the following components:</p>
+<pre><code>ThemeColors: Defines the color scheme for the theme.
+ThemeTypography: Defines the typography styles for the theme.
+ThemeComponents: Defines the styles for various UI components.
+</code></pre>
+<p>These components are platform-agnostic and can be used in different environments, such as Kotlin 
+Multiplatform (KMP).</p>
+<h5 id="compose-mapper"><strong>Compose Mapper</strong></h5>
+<p>The ComposeMapper object contains functions to convert the platform-agnostic theme values to 
+Compose-specific values. These functions map the raw theme values (e.g., colors, typography) to
+their Compose counterparts (e.g., Color, TextStyle). </p>
+<h5 id="compose-mortar-theme"><strong>Compose Mortar Theme</strong></h5>
+<p>The MortarComposeTheme class is the Compose-specific representation of the theme. It uses the values 
+provided by the ComposeMapper to define the theme and its components in a format compatible with 
+Jetpack Compose.</p>
+<h5 id="component-api-philosophy"><strong>Component API philosophy</strong></h5>
+<p>For this project, the design of our components API is more restrictive than common APIs for a compose component. We 
+could have a "slot" api similar to material components, but that opens the components up to being 
+misused and inconsistent. The decision to allow flexibility is ultimately a cross platform decision 
+on the philosophy of customizability. Flexible components might get misused, but restrictive apis 
+might never be used (if consuming developers find them too restrictive).</p>
+<p>Also worth noting that even though there are two custom component definitions, the less custom components
+we have, the better. Driving default component (ex. button) styles from semantic tokens will be easier 
+to maintain long term compared to having a component token for every single component MDS supports.</p>
+<h2 id="project-caveats">Project caveats</h2>
+<p>This project serves as a demonstration of a potential architecture for the Mortar design system. Here are some important considerations:</p>
+<ul>
+<li><strong>Simplified Token Coverage</strong>: In a full-scale implementation, the generated themes would include 
+all design tokens, such as radius, elevation, and more. This demo focuses on a subset to quickly 
+illustrate the concept. Additionally token name and structure would probably be different, as this 
+was mainly modeled after material for simplicity. </li>
+<li><strong>Manual Mapping</strong>: Currently, the adaptation from Mortar themes to Compose themes involves manual 
+boilerplate code. In a real-world solution, this would likely be automated through code generation 
+to reduce manual effort and potential errors. Consumers of the library would use a compose version
+of a generated theme (ex. HebMortar would have a HebMortarCompose generated theme...).  </li>
+<li><strong>Material 3 Wrapping</strong>: The decision to wrap the Material 3 theme is intentional for this demo. It 
+was used to showcase a potential approach to still take advantage of existing M3 components with custom
+styling. In a complete design system, the schema and approach would be collaboratively developed by 
+the design and engineering teams.</li>
+<li><strong>Versioning</strong>: versioning the design data schema would need to be worked out cross platform, to ensure
+changes to the schema don't break any of the automation or theme implementation. Breaking changes 
+would need to be versioned appropriately. </li>
+</ul>
+<h2 id="project-modules">Project Modules</h2>
+<ul>
+<li><code>docs</code>: location of the documentation you are currently reading. </li>
+<li><code>compose-components</code>: a list of standard components that are very commonly used in most apps. Common examples are headers, buttons, text fields, etc...</li>
+<li><code>compose-core</code>: base component code and logic that is common to all compose implementation.</li>
+<li><code>demo-mortar</code>: a demo application that can be used to show mortar components in action.</li>
+<li><code>themes</code>: a set of generated product specific themes.</li>
+<li><code>token-compiler</code>: Kotlin annotation processor that generates the kotlin code for product specific themes. The themes are generated from
+ Mortar design system json files.</li>
+<li><code>token-model</code>: a set of generated token definitions.</li>
+</ul>
+<h2 id="versioning">Versioning</h2>
+<p>Mortar follows <a href="https://semver.org/">semantic versioning</a>. All artifacts are versioned on changes to any modules.<br />
+See more info at the <a href="dev_guide/">dev guide</a></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-08-04 21:00:01.648398+00:00
+-->
