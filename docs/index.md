@@ -88,7 +88,8 @@ would need to be versioned appropriately.
 * `themes`: a set of generated product specific themes.
 * `token-compiler`: Kotlin annotation processor that generates the kotlin code for product specific themes. The themes are generated from
  Mortar design system json files.
-* `token-model`: a set of generated token definitions.
+* `token-model`: houses the data contract for our MDS theming system, as well as the schema for MDS 
+token data json files. 
 
 ## Versioning 
 Mortar follows [semantic versioning](https://semver.org/). All artifacts are versioned on changes to any modules.  

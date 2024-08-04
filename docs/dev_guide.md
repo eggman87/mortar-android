@@ -15,7 +15,7 @@ First, bring in the required dependencies from artifactory:
 The themes project will bring in all product themes from MDS, but don't worry - R8 will get rid of unused
 classes when compiling a release build.
 
-Next, to use Mortar you can wrap all of your composable code with `MaterialMortarTheme`. Mortar currently
+Next, to use Mortar components, it is required wrap all of your composable code with `MaterialMortarTheme`. Mortar currently
 uses material 3 components internally. 
 
 ```kotlin
@@ -33,6 +33,20 @@ HebMortar.theme // heb
 CmMortar.theme // central market
 ```
 
+## Components
+*_view javadocs for more information on available parameters_
+
+MDS currently supports the following components:
+
+
+
+* `MortarButton`: A Mortar theme implementation of a button, this button uses mortar theming on top of material UI button theming.
+```kotlin
+            MortarButton(
+                onClick = {},
+                label = "I am a button"
+            )
+```
 ## Using theme properties 
 It is recommended that you use components if they already exist, but you still might sometimes need 
 to drive some of your UI with theme values. To do this, access colors/typography/components from 
