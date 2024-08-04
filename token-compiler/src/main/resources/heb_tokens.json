@@ -12,7 +12,7 @@
       "red": "#FF5722",
       "green": "#795548",
       "blue": "#2196F3",
-      "darkRed": "#D32F2F",
+      "darkRed": "#8b0000",
       "darkGreen": "#388E3C",
       "darkBlue": "#1976D2",
       "darkGrey": "#D3D3D3"
@@ -92,7 +92,7 @@
       },
       "surface": {
         "light": "{colors.darkGrey}",
-        "dark": "{colors.black}"
+        "dark": "{colors.darkRed}"
       },
       "onSurface": {
         "light": "{colors.black}",

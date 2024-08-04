@@ -21,7 +21,6 @@ import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -35,7 +34,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.eggman.mortar.android.LocalMortarColorScheme
-import com.eggman.mortar.android.LocalMortarTypography
 import com.eggman.mortar.android.Mortar
 import com.eggman.mortar.android.MortarThemes.MaterialMortarTheme
 import com.eggman.mortar.android.components.atoms.ButtonVariant
@@ -76,7 +74,12 @@ class MainActivity : ComponentActivity() {
                         .fillMaxWidth()
                 ) {
                     ButtonForTheme(name = "HEB", theme = HebMortar.theme, inDarkMode)
-                    ButtonForTheme(name = "Central Market", theme = CmMortar.theme, inDarkMode)
+                    ButtonForTheme(name = "CM", theme = CmMortar.theme, inDarkMode)
+
+                    Text(
+                        modifier = Modifier.padding(8.dp),
+                        text = " * color scheme has not been fine tuned and is somewhat random. " +
+                                "sorry if any eyes were hurt while viewing this application.")
                 }
             }
 
@@ -102,10 +105,6 @@ fun ButtonForTheme(name: String, theme: MortarTheme, isDark: Boolean ) {
         ) {
             Text(
                 text = "$name Theme"
-            )
-            Text(
-                text = "Please note this color scheme is somewhat random...Sorry if it hurts the eyes...",
-                style = LocalMortarTypography.current.bodySmall
             )
 
             Spacer(modifier = Modifier.height(24.dp))
@@ -167,18 +166,18 @@ fun ButtonForTheme(name: String, theme: MortarTheme, isDark: Boolean ) {
             Spacer(modifier = Modifier.height(36.dp))
 
             Text(
-                text = "M3 default (bodySmall)",
-                style = MaterialTheme.typography.bodySmall
+                text = "bodySmall",
+                style = Mortar.typography.bodySmall
             )
             Text(
-                text = "M3 default (bodyMedium)",
+                text = "bodyMedium",
                 modifier = Modifier.padding(top = 8.dp),
-                style = MaterialTheme.typography.bodyMedium
+                style = Mortar.typography.bodyMedium
             )
             Text(
-                text = "M3 default (bodyLarge)",
+                text = "bodyLarge",
                 modifier = Modifier.padding(top = 8.dp),
-                style = MaterialTheme.typography.bodyLarge
+                style = Mortar.typography.bodyLarge
             )
         }
     }
