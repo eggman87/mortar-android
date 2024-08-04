@@ -1,0 +1,187 @@
+{
+  "primitive": {
+    "colors": {
+      "hebRed": "#EE2824",
+      "brisket": "#92000d",
+      "cheesePuff": "#ef8d29",
+      "coldBrew": "#717172",
+      "hatch": "#c2f0c2",
+      "curbsideBlue": "#009fce",
+      "black": "#000000",
+      "white": "#FFFFFF",
+      "red": "#FF5722",
+      "green": "#795548",
+      "blue": "#2196F3",
+      "darkRed": "#D32F2F",
+      "darkGreen": "#388E3C",
+      "darkBlue": "#1976D2",
+      "darkGrey": "#D3D3D3"
+    },
+    "radius": {
+      "none": 0,
+      "small": 4,
+      "medium": 8,
+      "large": 16
+    },
+    "elevation": {
+      "none": 0,
+      "low": 2,
+      "medium": 4,
+      "high": 8
+    },
+    "motion": {
+      "fast": 150,
+      "medium": 300,
+      "slow": 600
+    },
+    "fontNames": {
+      "Roboto": "Roboto"
+    },
+    "fontSizes": {
+      "small": 14,
+      "medium": 18,
+      "large": 22
+    },
+    "fontWeights": {
+      "regular": "400",
+      "medium": "500",
+      "bold": "700"
+    }
+  },
+  "semantic": {
+    "colors": {
+      "primary": {
+        "light": "{colors.hebRed}",
+        "dark": "{colors.black}"
+      },
+      "onPrimary": {
+        "light": "{colors.white}",
+        "dark": "{colors.hebRed}"
+      },
+      "primaryContainer": {
+        "light": "{colors.hebRed}",
+        "dark": "{colors.hebRed}"
+      },
+      "onPrimaryContainer": {
+        "light": "{colors.white}",
+        "dark": "{colors.brisket}"
+      },
+      "secondary": {
+        "light": "{colors.brisket}",
+        "dark": "{colors.curbsideBlue}"
+      },
+      "onSecondary": {
+        "light": "{colors.cheesePuff}",
+        "dark": "{colors.brisket}"
+      },
+      "secondaryContainer": {
+        "light": "{colors.brisket}",
+        "dark": "{colors.curbsideBlue"
+      },
+      "onSecondaryContainer": {
+        "light": "{colors.hatch}",
+        "dark": "{colors.brisket}"
+      },
+      "background": {
+        "light": "{colors.white}",
+        "dark": "{colors.black}"
+      },
+      "onBackground": {
+        "light": "{colors.black}",
+        "dark": "{colors.white}"
+      },
+      "surface": {
+        "light": "{colors.darkGrey}",
+        "dark": "{colors.black}"
+      },
+      "onSurface": {
+        "light": "{colors.black}",
+        "dark": "{colors.white}"
+      },
+      "error": {
+        "light": "{colors.red}",
+        "dark": "{colors.darkRed}"
+      },
+      "onError": {
+        "light": "{colors.white}",
+        "dark": "{colors.black}"
+      },
+      "errorContainer": {
+        "light": "{colors.red}",
+        "dark": "{colors.darkRed}"
+      },
+      "onErrorContainer": {
+        "light": "{colors.white}",
+        "dark": "{colors.black}"
+      },
+      "disabledPrimary": {
+        "light": "{colors.hebRed}",
+        "dark": "{colors.darkGrey}",
+        "alpha": 0.40
+      },
+      "disabledOnPrimary": {
+        "light": "{colors.black}",
+        "dark": "{colors.black}",
+        "alpha": 0.50
+      },
+      "disabledSecondary": {
+        "light": "{colors.hebRed}",
+        "dark": "{colors.hebRed}",
+        "alpha": 0.40
+      },
+      "disabledOnSecondary": {
+        "light": "{colors.black}",
+        "dark": "{colors.black}",
+        "alpha": 0.50
+      }
+    },
+    "radius": {
+      "cardRadius": "{radius.medium}"
+    },
+    "elevation": {
+      "cardElevation": "{elevation.medium}"
+    },
+    "typography": {
+      "bodySmall": {
+        "fontColor": "{semantic.colors.onSurface}",
+        "fontFamily": "{fontNames.Roboto}",
+        "fontWeight": "{fontWeights.regular}",
+        "size": "{fontSizes.small}"
+      },
+      "bodyMedium": {
+        "fontColor": "{semantic.colors.onSurface}",
+        "fontFamily": "{fontNames.Roboto}",
+        "fontWeight": "{fontWeights.regular}",
+        "size": "{fontSizes.medium}"
+      },
+      "bodyLarge": {
+        "fontColor": "{semantic.colors.onSurface}",
+        "fontFamily": "{fontNames.Roboto}",
+        "fontWeight": "{fontWeights.regular}",
+        "size": "{fontSizes.large}"
+      }
+    }
+  },
+  "component": {
+    "buttonPrimary": {
+      "type": "button",
+      "containerColor": "{semantic.colors.primaryContainer}",
+      "contentColor": "{semantic.colors.onPrimaryContainer}",
+      "disabledContainerColor": "{semantic.colors.disabledPrimary}",
+      "disabledContentColor": "{semantic.colors.disabledOnPrimary}",
+      "radius": "{radius.medium}",
+      "elevation": "{elevation.medium}",
+      "textStyle": "{semantic.typography.bodyMedium}"
+    },
+    "buttonSecondary": {
+      "type": "button",
+      "containerColor": "{semantic.colors.secondaryContainer}",
+      "contentColor": "{semantic.colors.onSecondaryContainer}",
+      "disabledContainerColor": "{semantic.colors.disabledSecondary}",
+      "disabledContentColor": "{semantic.colors.disabledOnSecondary}",
+      "radius": "{radius.medium}",
+      "elevation": "{elevation.medium}",
+      "textStyle": "{semantic.typography.bodyMedium}"
+    }
+  }
+}

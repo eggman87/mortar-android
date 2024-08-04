@@ -1,0 +1,345 @@
+public final class com/eggman/tokens/model/Color {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;F)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;FILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()F
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;F)Lcom/eggman/tokens/model/Color;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/Color;Ljava/lang/String;Ljava/lang/String;FILjava/lang/Object;)Lcom/eggman/tokens/model/Color;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlpha ()F
+	public final fun getDark ()Ljava/lang/String;
+	public final fun getLight ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/eggman/tokens/model/MortarTheme {
+	public fun <init> (Lcom/eggman/tokens/model/ThemeColors;Lcom/eggman/tokens/model/ThemeTypography;Lcom/eggman/tokens/model/ThemeComponents;)V
+	public final fun component1 ()Lcom/eggman/tokens/model/ThemeColors;
+	public final fun component2 ()Lcom/eggman/tokens/model/ThemeTypography;
+	public final fun component3 ()Lcom/eggman/tokens/model/ThemeComponents;
+	public final fun copy (Lcom/eggman/tokens/model/ThemeColors;Lcom/eggman/tokens/model/ThemeTypography;Lcom/eggman/tokens/model/ThemeComponents;)Lcom/eggman/tokens/model/MortarTheme;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/MortarTheme;Lcom/eggman/tokens/model/ThemeColors;Lcom/eggman/tokens/model/ThemeTypography;Lcom/eggman/tokens/model/ThemeComponents;ILjava/lang/Object;)Lcom/eggman/tokens/model/MortarTheme;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColors ()Lcom/eggman/tokens/model/ThemeColors;
+	public final fun getComponents ()Lcom/eggman/tokens/model/ThemeComponents;
+	public final fun getTypography ()Lcom/eggman/tokens/model/ThemeTypography;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/eggman/tokens/model/ThemeColors {
+	public abstract fun getBackground ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getDisabledOnPrimary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getDisabledOnSecondary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getDisabledPrimary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getDisabledSecondary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getError ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getErrorContainer ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnBackground ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnError ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnErrorContainer ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnPrimary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnPrimaryContainer ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnSecondary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnSecondaryContainer ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getOnSurface ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getPrimary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getPrimaryContainer ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getSecondary ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getSecondaryContainer ()Lcom/eggman/tokens/model/Color;
+	public abstract fun getSurface ()Lcom/eggman/tokens/model/Color;
+}
+
+public abstract interface class com/eggman/tokens/model/ThemeComponents {
+	public abstract fun getButtonPrimary ()Lcom/eggman/tokens/model/component/Button;
+	public abstract fun getButtonSecondary ()Lcom/eggman/tokens/model/component/Button;
+}
+
+public abstract interface class com/eggman/tokens/model/ThemeTypography {
+	public abstract fun getBodyLarge ()Lcom/eggman/tokens/model/Typography;
+	public abstract fun getBodyMedium ()Lcom/eggman/tokens/model/Typography;
+	public abstract fun getBodySmall ()Lcom/eggman/tokens/model/Typography;
+}
+
+public final class com/eggman/tokens/model/Typography {
+	public fun <init> (Lcom/eggman/tokens/model/Color;Ljava/lang/String;II)V
+	public final fun component1 ()Lcom/eggman/tokens/model/Color;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun copy (Lcom/eggman/tokens/model/Color;Ljava/lang/String;II)Lcom/eggman/tokens/model/Typography;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/Typography;Lcom/eggman/tokens/model/Color;Ljava/lang/String;IIILjava/lang/Object;)Lcom/eggman/tokens/model/Typography;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFontColor ()Lcom/eggman/tokens/model/Color;
+	public final fun getFontFamily ()Ljava/lang/String;
+	public final fun getFontSize ()I
+	public final fun getFontWeight ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/eggman/tokens/model/component/Button {
+	public fun <init> (Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;IILcom/eggman/tokens/model/Typography;)V
+	public final fun component1 ()Lcom/eggman/tokens/model/Color;
+	public final fun component2 ()Lcom/eggman/tokens/model/Color;
+	public final fun component3 ()Lcom/eggman/tokens/model/Color;
+	public final fun component4 ()Lcom/eggman/tokens/model/Color;
+	public final fun component5 ()I
+	public final fun component6 ()I
+	public final fun component7 ()Lcom/eggman/tokens/model/Typography;
+	public final fun copy (Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;IILcom/eggman/tokens/model/Typography;)Lcom/eggman/tokens/model/component/Button;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/component/Button;Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;Lcom/eggman/tokens/model/Color;IILcom/eggman/tokens/model/Typography;ILjava/lang/Object;)Lcom/eggman/tokens/model/component/Button;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContainerColor ()Lcom/eggman/tokens/model/Color;
+	public final fun getContentColor ()Lcom/eggman/tokens/model/Color;
+	public final fun getDisabledContainerColor ()Lcom/eggman/tokens/model/Color;
+	public final fun getDisabledContentColor ()Lcom/eggman/tokens/model/Color;
+	public final fun getElevation ()I
+	public final fun getRadius ()I
+	public final fun getTextStyle ()Lcom/eggman/tokens/model/Typography;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/eggman/tokens/model/json/Parsers {
+	public static final field INSTANCE Lcom/eggman/tokens/model/json/Parsers;
+	public final fun json ()Lkotlinx/serialization/json/Json;
+}
+
+public final class com/eggman/tokens/model/token/ButtonJsonToken : com/eggman/tokens/model/token/ComponentJsonToken {
+	public static final field Companion Lcom/eggman/tokens/model/token/ButtonJsonToken$Companion;
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/eggman/tokens/model/token/ButtonJsonToken;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/token/ButtonJsonToken;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/eggman/tokens/model/token/ButtonJsonToken;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContainerColor ()Ljava/lang/String;
+	public final fun getContentColor ()Ljava/lang/String;
+	public final fun getDisabledContainerColor ()Ljava/lang/String;
+	public final fun getDisabledContentColor ()Ljava/lang/String;
+	public final fun getElevation ()Ljava/lang/String;
+	public final fun getRadius ()Ljava/lang/String;
+	public final fun getTextStyle ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final synthetic fun write$Self$token_model (Lcom/eggman/tokens/model/token/ButtonJsonToken;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/eggman/tokens/model/token/ButtonJsonToken$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/eggman/tokens/model/token/ButtonJsonToken$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/eggman/tokens/model/token/ButtonJsonToken;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/eggman/tokens/model/token/ButtonJsonToken;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/ButtonJsonToken$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/ColorTokenReference {
+	public static final field Companion Lcom/eggman/tokens/model/token/ColorTokenReference$Companion;
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/Double;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Double;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;)Lcom/eggman/tokens/model/token/ColorTokenReference;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/token/ColorTokenReference;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;ILjava/lang/Object;)Lcom/eggman/tokens/model/token/ColorTokenReference;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAlpha ()Ljava/lang/Double;
+	public final fun getDark ()Ljava/lang/String;
+	public final fun getLight ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final synthetic fun write$Self$token_model (Lcom/eggman/tokens/model/token/ColorTokenReference;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/eggman/tokens/model/token/ColorTokenReference$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/eggman/tokens/model/token/ColorTokenReference$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/eggman/tokens/model/token/ColorTokenReference;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/eggman/tokens/model/token/ColorTokenReference;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/ColorTokenReference$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public abstract class com/eggman/tokens/model/token/ComponentJsonToken {
+	public static final field Companion Lcom/eggman/tokens/model/token/ComponentJsonToken$Companion;
+	public synthetic fun <init> (ILkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public static final synthetic fun write$Self (Lcom/eggman/tokens/model/token/ComponentJsonToken;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/eggman/tokens/model/token/ComponentJsonToken$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/DesignTokens {
+	public static final field Companion Lcom/eggman/tokens/model/token/DesignTokens$Companion;
+	public synthetic fun <init> (ILcom/eggman/tokens/model/token/PrimitiveJsonTokens;Lcom/eggman/tokens/model/token/SemanticJsonTokens;Ljava/util/Map;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;Lcom/eggman/tokens/model/token/SemanticJsonTokens;Ljava/util/Map;)V
+	public final fun component1 ()Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;
+	public final fun component2 ()Lcom/eggman/tokens/model/token/SemanticJsonTokens;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun copy (Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;Lcom/eggman/tokens/model/token/SemanticJsonTokens;Ljava/util/Map;)Lcom/eggman/tokens/model/token/DesignTokens;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/token/DesignTokens;Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;Lcom/eggman/tokens/model/token/SemanticJsonTokens;Ljava/util/Map;ILjava/lang/Object;)Lcom/eggman/tokens/model/token/DesignTokens;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getComponent ()Ljava/util/Map;
+	public final fun getPrimitive ()Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;
+	public final fun getSemantic ()Lcom/eggman/tokens/model/token/SemanticJsonTokens;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final synthetic fun write$Self$token_model (Lcom/eggman/tokens/model/token/DesignTokens;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/eggman/tokens/model/token/DesignTokens$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/eggman/tokens/model/token/DesignTokens$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/eggman/tokens/model/token/DesignTokens;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/eggman/tokens/model/token/DesignTokens;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/DesignTokens$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public abstract interface annotation class com/eggman/tokens/model/token/GenerateTokens : java/lang/annotation/Annotation {
+	public abstract fun jsonFile ()Ljava/lang/String;
+	public abstract fun packageName ()Ljava/lang/String;
+	public abstract fun themePrefix ()Ljava/lang/String;
+}
+
+public final class com/eggman/tokens/model/token/PrimitiveJsonTokens {
+	public static final field Companion Lcom/eggman/tokens/model/token/PrimitiveJsonTokens$Companion;
+	public synthetic fun <init> (ILjava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
+	public final fun component1 ()Ljava/util/Map;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun component4 ()Ljava/util/Map;
+	public final fun component5 ()Ljava/util/Map;
+	public final fun component6 ()Ljava/util/Map;
+	public final fun component7 ()Ljava/util/Map;
+	public final fun copy (Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColors ()Ljava/util/Map;
+	public final fun getElevation ()Ljava/util/Map;
+	public final fun getFontNames ()Ljava/util/Map;
+	public final fun getFontSizes ()Ljava/util/Map;
+	public final fun getFontWeights ()Ljava/util/Map;
+	public final fun getMotion ()Ljava/util/Map;
+	public final fun getRadius ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final synthetic fun write$Self$token_model (Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/eggman/tokens/model/token/PrimitiveJsonTokens$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/eggman/tokens/model/token/PrimitiveJsonTokens$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/eggman/tokens/model/token/PrimitiveJsonTokens;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/PrimitiveJsonTokens$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/SemanticJsonTokens {
+	public static final field Companion Lcom/eggman/tokens/model/token/SemanticJsonTokens$Companion;
+	public synthetic fun <init> (ILjava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)V
+	public final fun component1 ()Ljava/util/Map;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun component4 ()Ljava/util/Map;
+	public final fun copy (Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;)Lcom/eggman/tokens/model/token/SemanticJsonTokens;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/token/SemanticJsonTokens;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;Ljava/util/Map;ILjava/lang/Object;)Lcom/eggman/tokens/model/token/SemanticJsonTokens;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getColors ()Ljava/util/Map;
+	public final fun getElevation ()Ljava/util/Map;
+	public final fun getRadius ()Ljava/util/Map;
+	public final fun getTypography ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final synthetic fun write$Self$token_model (Lcom/eggman/tokens/model/token/SemanticJsonTokens;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/eggman/tokens/model/token/SemanticJsonTokens$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/eggman/tokens/model/token/SemanticJsonTokens$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/eggman/tokens/model/token/SemanticJsonTokens;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/eggman/tokens/model/token/SemanticJsonTokens;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/SemanticJsonTokens$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/TypographyTokenReference {
+	public static final field Companion Lcom/eggman/tokens/model/token/TypographyTokenReference$Companion;
+	public synthetic fun <init> (ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/internal/SerializationConstructorMarker;)V
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/eggman/tokens/model/token/TypographyTokenReference;
+	public static synthetic fun copy$default (Lcom/eggman/tokens/model/token/TypographyTokenReference;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/eggman/tokens/model/token/TypographyTokenReference;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFontColor ()Ljava/lang/String;
+	public final fun getFontFamily ()Ljava/lang/String;
+	public final fun getFontWeight ()Ljava/lang/String;
+	public final fun getSize ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public static final synthetic fun write$Self$token_model (Lcom/eggman/tokens/model/token/TypographyTokenReference;Lkotlinx/serialization/encoding/CompositeEncoder;Lkotlinx/serialization/descriptors/SerialDescriptor;)V
+}
+
+public final class com/eggman/tokens/model/token/TypographyTokenReference$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/eggman/tokens/model/token/TypographyTokenReference$$serializer;
+	public fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/eggman/tokens/model/token/TypographyTokenReference;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/eggman/tokens/model/token/TypographyTokenReference;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/eggman/tokens/model/token/TypographyTokenReference$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
