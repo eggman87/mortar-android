@@ -123,6 +123,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#javadocs" class="nav-link">Javadocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-bs-level="2"><a href="#breaking-changes" class="nav-link">Breaking Changes</a>
               <ul class="nav flex-column">
               </ul>
@@ -184,6 +188,12 @@ like this: </p>
 internal object StringCheeseTokenSchema
 </code></pre>
 <p>drop json file called <code>sc_tokens.json</code> into <code>token-compiler/resources</code>.</p>
+<h2 id="javadocs">Javadocs</h2>
+<p>To see dokka javadocs in your browser, run:</p>
+<pre><code>./gradlew dokkaJavadoc
+</code></pre>
+<p>Then you can navigate to each modules index.html @ module/build/dokka/javadoc/index.html to view 
+javadocs in your browser. </p>
 <h2 id="breaking-changes">Breaking Changes</h2>
 <p>To support semantic versioning, this project uses the <a href="https://github.com/Kotlin/binary-compatibility-validator">binary-compatibility-validator</a> 
 plugin. Run the following command to dump the current api as the baseline version to compare against:</p>
