@@ -49,9 +49,10 @@ The project is published to a local Maven repository located at `project/build/r
 
 ## Documentation
 
+Documentation is published to [GH pages](https://eggman87.github.io/mortar-android/dev_guide/). 
+
 This project uses [MkDocs](https://www.mkdocs.org/) for documentation. Most documentation for this project will be located
-there. Please start the server and browse the docs. You can manually view the docs by going to [them](docs/index.md)
-but the web site version is much easier to use and read.
+there.
 
 ### Starting the MkDocs Server
 
@@ -66,6 +67,11 @@ but the web site version is much easier to use and read.
     ```
 
 3. Open your browser and navigate to `http://127.0.0.1:8000` to view the documentation.
+
+4. To deploy latest documentation to GH pages, run:
+    ```sh
+    mkdocs gh-deploy
+    ```
 
 ## Project Modules
 

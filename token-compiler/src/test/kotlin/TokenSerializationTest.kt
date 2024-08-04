@@ -33,12 +33,13 @@ class TokenSerializationTest {
     @Test
     fun `TypographyTokenReference constructor returns correct string`() {
         val typographyTokenReference = TypographyTokenReference(
+            fontColor = "colorToken",
             fontFamily = "Serif",
             fontWeight = "Bold",
             size = "16sp"
         )
 
-        val result = TokenSerialization.run { typographyTokenReference.constructor() }
-        assertEquals("Typography(FontFamily.Serif, FontWeight.Bold, FontSize.16sp)", result)
+        val result = TokenSerialization.run { typographyTokenReference.constructor("Colors") }
+        assertEquals("Typography(Colors.colorToken, FontFamily.Serif, FontWeight.Bold, FontSize.16sp)", result)
     }
 }
