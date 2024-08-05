@@ -115,7 +115,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#project-caveats" class="nav-link">Project caveats</a>
+            <li class="nav-item" data-bs-level="2"><a href="#caveats" class="nav-link">Caveats</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -135,21 +135,21 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="welcome-to-mortar-android">Welcome to Mortar Android</h1>
-<p>Mortar is application design system, meant to make building UI consistent, flexible and
-most importantly fast. The goal of Mortar is to allow developers to focus on building new 
-features - and less on implementation details of common ui elements. This project is the Android 
+<p>Mortar is an application design system. It is meant to make building UI consistent, flexible and
+most importantly fast. The goal of Mortar is to allow app developers to focus on building new 
+features - and less on implementation details of common UI components. This project is the Android 
 implementation of Mortar for Jetpack Compose.</p>
-<p>The implementation of Mortar will lean heavily on Android platform standards, and will use material 3 
+<p>This implementation of Mortar leans heavily on Android platform standards, and will use material 3 
 (m3) components where possible. The structure of this design system is based 
 on <a href="https://atomicdesign.bradfrost.com/">Atomic Design</a></p>
 <h2 id="architecture">Architecture</h2>
 <p>The Mortar design system architecture is based on having a single source of truth. That single source 
-of truth is the mortar design data JSON files. These JSON files are used to code-generate themes per 
-product/brand. The JSON data would be a cross-platform owned definition of product theme implementations 
-of MDS. </p>
+of truth is the mortar design data JSON file. These JSON files are used by Mortar-Android to 
+code-generate themes per product/brand. This JSON data is a cross-platform owned definition of 
+product theme implementations of MDS. </p>
 <h5 id="single-source-of-truth"><strong>Single Source of Truth</strong></h5>
 <p>The design data JSON files define the themes and their properties. These files include definitions for 
-colors, typography, and component styles, which are used across different parts of the application to 
+colors, typography, size/shapes, and component styles, which are used across different parts of the application to 
 ensure consistency and flexibility.</p>
 <h5 id="code-generation-process"><strong>Code Generation Process</strong></h5>
 <p>The code generation process takes the JSON files and generates platform-agnostic theme implementations. 
@@ -181,8 +181,9 @@ might never be used (if consuming developers find them too restrictive).</p>
 <p>Also worth noting that even though there are two custom component definitions, the less custom components
 we have, the better. Driving default component (ex. button) styles from semantic tokens will be easier 
 to maintain long term compared to having a component token for every single component MDS supports.</p>
-<h2 id="project-caveats">Project caveats</h2>
-<p>This project serves as a demonstration of a potential architecture for the Mortar design system. Here are some important considerations:</p>
+<h2 id="caveats">Caveats</h2>
+<p>This project serves as a demonstration of a potential architecture for the Mortar design system. 
+Here are some important caveats:</p>
 <ul>
 <li><strong>Simplified Token Coverage</strong>: In a full-scale implementation, the generated themes would include 
 all design tokens, such as radius, elevation, and more. This demo focuses on a subset to quickly 
@@ -296,5 +297,5 @@ See more info at the <a href="dev_guide/">dev guide</a></p></div>
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-08-04 23:05:08.928558+00:00
+Build Date UTC : 2024-08-05 01:06:02.795953+00:00
 -->
