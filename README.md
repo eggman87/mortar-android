@@ -3,6 +3,10 @@
 
 Mortar is a fully functional design system for building consistent, flexible, and fast UI components. This project is the Android implementation of Mortar for Jetpack Compose, leaning heavily on Android platform standards and Material 3 (M3) components.
 
+See full project documentation on [GH pages](https://eggman87.github.io/mortar-android/dev_guide/).
+
+![Arch diagram](docs/mortar_arch.png)!
+
 ## Getting Started
 
 ### Prerequisites
@@ -89,7 +93,7 @@ Mortar follows [semantic versioning](https://semver.org/).
 
 ## Contributing
 
-Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Contributions are welcome! 
 
 ## License
 
