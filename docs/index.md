@@ -1,4 +1,5 @@
 # Welcome to Mortar Android 
+![Alt text](Screenshot_20240804_200756.png)![Screenshot](Screenshot_20240804_201136.png)
 
 Mortar is an application design system. It is meant to make building UI consistent, flexible and
 most importantly fast. The goal of Mortar is to allow app developers to focus on building new 
