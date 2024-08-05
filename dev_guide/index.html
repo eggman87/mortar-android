@@ -149,8 +149,14 @@
 <h1 id="developer-guide">Developer guide</h1>
 <p>The Mortar design system currently supports jetpack compose. </p>
 <h2 id="getting-started">Getting started</h2>
-<p>First, bring in the required dependencies from artifactory:</p>
-<pre><code class="language-kotlin">    dependencies {
+<p>First, bring in the required dependencies from gh packages:</p>
+<pre><code class="language-kotlin">    repositories {
+        maven {
+            name = &quot;GitHubPackages&quot;
+            url = uri(&quot;https://maven.pkg.github.com/eggman87/mortar-android&quot;)
+        }    
+    }      
+    dependencies {
         implementation(&quot;com.eggman.mortar:compose-components:0.0.1&quot;)
         implementation(&quot;com.eggman.mortar:themes:0.0.1&quot;)
     }
