@@ -1,24 +1,24 @@
 # Welcome to Mortar Android 
 
-Mortar is application design system, meant to make building UI consistent, flexible and
-most importantly fast. The goal of Mortar is to allow developers to focus on building new 
-features - and less on implementation details of common ui elements. This project is the Android 
+Mortar is an application design system. It is meant to make building UI consistent, flexible and
+most importantly fast. The goal of Mortar is to allow app developers to focus on building new 
+features - and less on implementation details of common UI components. This project is the Android 
 implementation of Mortar for Jetpack Compose.
 
-The implementation of Mortar will lean heavily on Android platform standards, and will use material 3 
+This implementation of Mortar leans heavily on Android platform standards, and will use material 3 
 (m3) components where possible. The structure of this design system is based 
 on [Atomic Design](https://atomicdesign.bradfrost.com/)
 
 ## Architecture 
 The Mortar design system architecture is based on having a single source of truth. That single source 
-of truth is the mortar design data JSON files. These JSON files are used to code-generate themes per 
-product/brand. The JSON data would be a cross-platform owned definition of product theme implementations 
-of MDS. 
+of truth is the mortar design data JSON file. These JSON files are used by Mortar-Android to 
+code-generate themes per product/brand. This JSON data is a cross-platform owned definition of 
+product theme implementations of MDS. 
 
 
 ##### **Single Source of Truth**
 The design data JSON files define the themes and their properties. These files include definitions for 
-colors, typography, and component styles, which are used across different parts of the application to 
+colors, typography, size/shapes, and component styles, which are used across different parts of the application to 
 ensure consistency and flexibility.
 
 ##### **Code Generation Process**
@@ -58,9 +58,10 @@ Also worth noting that even though there are two custom component definitions, t
 we have, the better. Driving default component (ex. button) styles from semantic tokens will be easier 
 to maintain long term compared to having a component token for every single component MDS supports.
 
-## Project caveats 
+## Caveats 
 
-This project serves as a demonstration of a potential architecture for the Mortar design system. Here are some important considerations:
+This project serves as a demonstration of a potential architecture for the Mortar design system. 
+Here are some important caveats:
 
 * **Simplified Token Coverage**: In a full-scale implementation, the generated themes would include 
 all design tokens, such as radius, elevation, and more. This demo focuses on a subset to quickly 
