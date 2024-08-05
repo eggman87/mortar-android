@@ -140,10 +140,11 @@
 most importantly fast. The goal of Mortar is to allow app developers to focus on building new 
 features - and less on implementation details of common UI components. This project is the Android 
 implementation of Mortar for Jetpack Compose.</p>
-<p>This implementation of Mortar leans heavily on Android platform standards, and will use material 3 
+<p>This implementation of Mortar leans heavily on Android platform standards,  and will use material 3 
 (m3) components where possible. The structure of this design system is based 
 on <a href="https://atomicdesign.bradfrost.com/">Atomic Design</a></p>
 <h2 id="architecture">Architecture</h2>
+<p><img alt="Arch diagram" src="mortar_arch.png" />!</p>
 <p>The Mortar design system architecture is based on having a single source of truth. That single source 
 of truth is the mortar design data JSON file. These JSON files are used by Mortar-Android to 
 code-generate themes per product/brand. This JSON data is a cross-platform owned definition of 
@@ -179,8 +180,9 @@ could have a "slot" api similar to material components, but that opens the compo
 misused and inconsistent. The decision to allow flexibility is ultimately a cross platform decision 
 on the philosophy of customizability. Flexible components might get misused, but restrictive apis 
 might never be used (if consuming developers find them too restrictive).</p>
-<p>Also worth noting that even though there are two custom component definitions, the less custom components
-we have, the better. Driving default component (ex. button) styles from semantic tokens will be easier 
+<h5 id="custom-component-styles"><strong>Custom component styles</strong></h5>
+<p>Even though there are two custom component definitions, the less custom components
+used, the better. Driving default component (ex. button) styles from semantic tokens will be easier 
 to maintain long term compared to having a component token for every single component MDS supports.</p>
 <h2 id="caveats">Caveats</h2>
 <p>This project serves as a demonstration of a potential architecture for the Mortar design system. 
@@ -298,5 +300,5 @@ See more info at the <a href="dev_guide/">dev guide</a></p></div>
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-08-05 15:07:35.372758+00:00
+Build Date UTC : 2024-08-05 20:15:34.209756+00:00
 -->
