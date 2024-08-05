@@ -6,16 +6,17 @@ most importantly fast. The goal of Mortar is to allow app developers to focus on
 features - and less on implementation details of common UI components. This project is the Android 
 implementation of Mortar for Jetpack Compose.
 
-This implementation of Mortar leans heavily on Android platform standards, and will use material 3 
+This implementation of Mortar leans heavily on Android platform standards,  and will use material 3 
 (m3) components where possible. The structure of this design system is based 
 on [Atomic Design](https://atomicdesign.bradfrost.com/)
 
 ## Architecture 
+![Arch diagram](mortar_arch.png)!
+
 The Mortar design system architecture is based on having a single source of truth. That single source 
 of truth is the mortar design data JSON file. These JSON files are used by Mortar-Android to 
 code-generate themes per product/brand. This JSON data is a cross-platform owned definition of 
 product theme implementations of MDS. 
-
 
 ##### **Single Source of Truth**
 The design data JSON files define the themes and their properties. These files include definitions for 
@@ -55,8 +56,9 @@ misused and inconsistent. The decision to allow flexibility is ultimately a cros
 on the philosophy of customizability. Flexible components might get misused, but restrictive apis 
 might never be used (if consuming developers find them too restrictive).
 
-Also worth noting that even though there are two custom component definitions, the less custom components
-we have, the better. Driving default component (ex. button) styles from semantic tokens will be easier 
+##### **Custom component styles**
+Even though there are two custom component definitions, the less custom components
+used, the better. Driving default component (ex. button) styles from semantic tokens will be easier 
 to maintain long term compared to having a component token for every single component MDS supports.
 
 ## Caveats 
