@@ -2,6 +2,7 @@ package com.eggman.mortar.android.components.atoms
 
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.size
@@ -15,6 +16,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.SubcomposeLayout
@@ -22,10 +24,13 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import com.eggman.mortar.android.Mortar
 import com.eggman.mortar.android.MortarComposeButtonStyle
+import com.eggman.mortar.android.MortarThemes.MaterialMortarTheme
+import com.mortar.android.HebMortar
 
 /**
  * A mortar design system button. This button is designed to be used inside a [Mortar] theme. It
@@ -215,6 +220,61 @@ private fun ButtonContent(label: String,
         Text(text = label, style = buttonTextStyle)
     }
 }
+
+/**
+ * If we had a flexible API, using a scope would allow us to have default suggestions and context that is
+ * important when having a slot api.
+ *
+ * This is here just as an example.
+ */
+@Stable
+@Suppress("unused")
+data class ButtonScope(val isLoading: Boolean, val buttonTextStyle: TextStyle, val textColor: Color) {
+    @Composable
+    fun Label(modifier: Modifier = Modifier, label: String) {
+        ButtonContent(
+            label = label,
+            isLoading = isLoading,
+            buttonTextStyle = buttonTextStyle,
+            textColor = textColor
+        )
+    }
+}
+
+@Preview
+@Composable
+fun ButtonPreview() {
+    MaterialMortarTheme(theme = HebMortar.theme) {
+        Column {
+            MortarButton(label = "Filled", variant = ButtonVariant.Filled, onClick = {  })
+            MortarButton(label = "Elevated", variant = ButtonVariant.Elevated, onClick = {  })
+            MortarButton(label = "Tonal", variant = ButtonVariant.Tonal, onClick = {  })
+            MortarButton(label = "Outlined", variant = ButtonVariant.Outlined, onClick = {  })
+            MortarButton(label = "Text", variant = ButtonVariant.Text, onClick = {  })
+        }
+    }
+}
+
+
+// the below is a example of how the [ButtonScope] api would allow flexibility, with default suggestions
+// and available context.
+//@Preview
+//@Composable
+//fun ButtonPreview() {
+//    MaterialMortarTheme(
+//        theme = HebMortar.theme
+//    ) {
+//        MortarButton(
+//            label = { Label(label = "Test") },
+//            onClick = {}
+//        )
+//
+//        MortarButton(
+//            label = { Text(text = "custom content", style = buttonTextStyle) },
+//            onClick = { })
+//    }
+//}
+
 
 /**
  * The kind of button.

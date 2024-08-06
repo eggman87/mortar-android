@@ -80,6 +80,10 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
 
+    debugImplementation(project(":themes")) //only to allow us to preview
+    debugImplementation(libs.androidx.ui.tooling.preview)
+    debugImplementation(libs.androidx.ui.tooling)
+
     testImplementation(libs.paparazzi)
     testImplementation(libs.junit)
     testImplementation(project(":themes"))
