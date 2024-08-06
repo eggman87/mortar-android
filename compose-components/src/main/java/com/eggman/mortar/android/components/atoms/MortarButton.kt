@@ -102,7 +102,6 @@ fun MortarButton(
             label = label,
             isLoading = isLoading,
             buttonTextStyle = style.textStyle.copy(color = textColor),
-            textColor = textColor
         )
     }
 
@@ -192,8 +191,7 @@ fun MortarButton(
 @Composable
 private fun ButtonContent(label: String,
                           isLoading: Boolean,
-                          buttonTextStyle: TextStyle,
-                          textColor: Color) {
+                          buttonTextStyle: TextStyle) {
     if (isLoading) {
         // we use sub compose layout to measure what button size is when not loading content,
         // so that changing loading state maintains button size.
@@ -208,7 +206,7 @@ private fun ButtonContent(label: String,
                     CircularProgressIndicator(
                         strokeWidth = 1.dp,
                         modifier = Modifier.size((text.height/localDensity.density).dp),
-                        color = textColor
+                        color = buttonTextStyle.color
                     )
                 }
             }.first().measure(Constraints.fixed(text.width, text.height))
@@ -235,8 +233,7 @@ data class ButtonScope(val isLoading: Boolean, val buttonTextStyle: TextStyle, v
         ButtonContent(
             label = label,
             isLoading = isLoading,
-            buttonTextStyle = buttonTextStyle,
-            textColor = textColor
+            buttonTextStyle = buttonTextStyle
         )
     }
 }
