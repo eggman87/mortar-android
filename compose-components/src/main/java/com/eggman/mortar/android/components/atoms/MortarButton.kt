@@ -18,7 +18,6 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.SubcomposeLayout
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
@@ -224,10 +223,18 @@ private fun ButtonContent(label: String,
  * important when having a slot api.
  *
  * This is here just as an example.
+ *
+ * Mortar button would have label param removed and instead use this new content param:
+ * @Composable
+ * fun MortarButton(
+ *     content: @Composable ButtonScope.() -> Unit
  */
 @Stable
 @Suppress("unused")
-data class ButtonScope(val isLoading: Boolean, val buttonTextStyle: TextStyle, val textColor: Color) {
+data class ButtonScope(val isLoading: Boolean, val buttonTextStyle: TextStyle) {
+    /**
+     * Default, recommended label to show in button.
+     */
     @Composable
     fun Label(modifier: Modifier = Modifier, label: String) {
         ButtonContent(
@@ -237,6 +244,24 @@ data class ButtonScope(val isLoading: Boolean, val buttonTextStyle: TextStyle, v
         )
     }
 }
+
+// the below is a example of how the [ButtonScope] api would allow flexibility, with default suggestions
+// and available context.
+//@Preview
+//@Composable
+//fun ButtonPreview() {
+//    MaterialMortarTheme(
+//        theme = HebMortar.theme
+//    ) {
+//        MortarButton(onClick = {}) {
+//              Label(label = "Test")
+//        }
+//
+//        MortarButton( onClick = { }) {
+//              Text(text = "custom content", style = buttonTextStyle) }
+//        }
+//    }
+//}
 
 @Preview
 @Composable
@@ -251,27 +276,6 @@ fun ButtonPreview() {
         }
     }
 }
-
-
-// the below is a example of how the [ButtonScope] api would allow flexibility, with default suggestions
-// and available context.
-//@Preview
-//@Composable
-//fun ButtonPreview() {
-//    MaterialMortarTheme(
-//        theme = HebMortar.theme
-//    ) {
-//        MortarButton(
-//            label = { Label(label = "Test") },
-//            onClick = {}
-//        )
-//
-//        MortarButton(
-//            label = { Text(text = "custom content", style = buttonTextStyle) },
-//            onClick = { })
-//    }
-//}
-
 
 /**
  * The kind of button.
