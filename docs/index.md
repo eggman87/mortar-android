@@ -78,6 +78,11 @@ of a generated theme (ex. HebMortar would have a HebMortarCompose generated them
 was used to showcase a potential approach to still take advantage of existing M3 components with custom
 styling. In a complete design system, the schema and approach would be collaboratively developed by 
 the design and engineering teams.
+* **Restrictive Component API**: Like stated above, the component API we have opted for is a 
+restrictive API vs a slot API. How flexible the API should be is ultimately a decision that needs to 
+be made cross platform (iOS, Web, Android and Design), and should be based on more context, like existing UI
+patterns and product usage. There are also API techniques to have flexibility with more contextual 
+defaults (custom scopes for slots, defaults, etc...). 
 * **Versioning**: versioning the design data schema would need to be worked out cross platform, to ensure
 changes to the schema don't break any of the automation or theme implementation. Breaking changes 
 would need to be versioned appropriately. 
